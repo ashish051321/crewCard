@@ -10,7 +10,7 @@ import {
 import { createLogger } from 'redux-logger';
 import { IAppState } from './app-state.type';
 
-import { homeReducer } from './home.reducer'
+import { homeReducer,cartReducer } from './home.reducer'
 
 const middleware = [createLogger()];
 
@@ -24,11 +24,25 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
-//  const rootReducer = combineReducers({
-//      myResult: homeReducer
-//  });
+ const rootReducer = combineReducers({
+     homeResult: homeReducer,
+     cartResult: cartReducer
+ });
 
-export const store: Store<IAppState> = createStore(
-  homeReducer,
+
+// const initialState: IAppState = {
+//   crewCard: {
+//     name: "Christine",
+//     cmtype: "AO Crew Member",
+//     title: "Gate Agent",
+//     years: "7",
+//     flightsserved: "5000"
+//   },
+//   cartItems: ["NA"]
+// };
+
+
+export const store: Store<any> = createStore(
+  rootReducer,
   enhancer
 );

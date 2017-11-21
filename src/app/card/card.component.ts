@@ -19,7 +19,7 @@ import { IAppState } from '../store/app-state.type';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
- @select((s) => {return s.crewCard}) crewProfile;
+ @select(['homeResult','crewCard']) crewProfile;
 // @select() count;
 
 
@@ -39,13 +39,13 @@ export class CardComponent implements OnInit {
     //   "flightsserved": "3252"
     // };;
 
-    // this.myDataObser = this.ngRedux.select().subscribe(
-    //   (data:any) => {
-    //       // this.count= this.ngRedux.select();
-    //       console.log(data);
-    //       this.crewProfile = data.crewCard;
-    //   }
-    // );
+    this.myDataObser = this.ngRedux.select().subscribe(
+      (data:any) => {
+          // this.count= this.ngRedux.select();
+          console.log(data);
+          // this.crewProfile = data.crewCard;
+      }
+    );
   }
 
   ngOnDestroy(){

@@ -33,19 +33,19 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.crewProfile = {
-      "name": "Jessica Woods",
-      "cmtype": "AO Crew Member",
-      "title": "Gate Agent",
-      "years": "7",
-      "flightsserved": "3252"
-    };;
+    // this.crewProfile = {
+    //   "name": "Jessica Woods",
+    //   "cmtype": "AO Crew Member",
+    //   "title": "Gate Agent",
+    //   "years": "7",
+    //   "flightsserved": "3252"
+    // };;
 
     this.myDataObser = this.ngRedux.select().subscribe(
       (data:any) => {
           // this.count= this.ngRedux.select();
           console.log(data);
-          this.count = data.counter;
+          this.crewProfile = data.crewCard;
       }
     );
   }

@@ -19,7 +19,8 @@ import { IAppState } from '../store/app-state.type';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
- @select(['homeResult','crewCard']) crewProfile;
+ @select(['crewCard']) crewProfile;
+ @select(['cartItems']) cartItems;
 // @select() count;
 
 
@@ -57,4 +58,8 @@ export class CardComponent implements OnInit {
     this.ngRedux.dispatch({type:"INCREMENT"});
   }
 
+
+  addToCart(){
+    this.ngRedux.dispatch({type:"ADDITEM"});
+  }
 }

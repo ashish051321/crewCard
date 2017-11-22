@@ -8,7 +8,6 @@
  <div class="crewImage">
         
  </div>
-   
  <div class="crewDesc">
         
  </div>
@@ -47,5 +46,21 @@ w-60-m w-40-l center mycard ">
 
 
 </article>
+
+
+<article> 
+<ul style="list-style-type: none" *ngFor="let item of (cartItems | async)">
+    <li style="float:left;margin-left:20px;">{{item}}</li>
+   
+</ul>
+<br>
+<button (click)="addToCart()" >Add to Cart Items</button>
+</article>
+
+
+
+
+
+
 
 

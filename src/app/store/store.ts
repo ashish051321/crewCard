@@ -10,7 +10,7 @@ import {
 import { createLogger } from 'redux-logger';
 import { IAppState } from './app-state.type';
 
-import { crewCard,cartItems } from './home.reducer'
+import { crewCard,cartItems } from './custom.reducers'
 
 const middleware = [createLogger()];
 
@@ -32,13 +32,13 @@ const enhancer = composeEnhancers(
 
 const initialState: IAppState = {
   crewCard: {
-    name: "Christine",
+    name: "Condoleeza Rice",
     cmtype: "AO Crew Member",
     title: "Gate Agent",
-    years: "7",
-    flightsserved: "5000"
+    years: "11",
+    flightsserved: "7000"
   },
-  cartItems: ["NA"]
+  cartItems: ["please add more items"]
 };
 
 

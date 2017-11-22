@@ -17,6 +17,8 @@ import { IAppState } from './app-state.type';
 //The problem with using multiple reducers is 
 // that the state object shape and the reducer parameters need to be managed well
 
+//Reducer to take state and increment or decrement the flightsserved property, 
+// depending upon the value of action.type
 export const crewCard: Reducer<any> = (state = {}, action) => {
   switch (action.type) {
 
@@ -32,6 +34,8 @@ export const crewCard: Reducer<any> = (state = {}, action) => {
 };
 
 
+//Reducer to take state and add or delete cart items, 
+// depending upon the value of action.type
 export const cartItems: Reducer<any> = (state = [], action) => {
   switch (action.type) {
 

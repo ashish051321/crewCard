@@ -23,10 +23,10 @@ export const crewCard: Reducer<any> = (state = {}, action) => {
   switch (action.type) {
 
     case 'INCREMENT':
-      return Object.assign({},state, {flightsserved: (+state.flightsserved + 1) });
+      return Object.assign({}, state, { ...state, flightsserved: (+state.flightsserved + 1).toString() });
 
     case 'DECREMENT':
-      return Object.assign({}, state ,{ flightsserved: (+state.flightsserved - 1).toString() });
+      return Object.assign({}, state, { ...state, flightsserved: (+state.flightsserved - 1).toString() });
 
     default:
       return state;
@@ -51,5 +51,27 @@ export const cartItems: Reducer<any> = (state = [], action) => {
     default:
       return state;
   }
+}
+
+
+
+export const myReducer: Reducer<any> = (state = {count:0}, action) => {
+
+    switch (action.type) {
+      
+          case 'INCREMENT':
+            {
+              // console.log(state);
+              return {...state,count:state.count+1};
+            }
+      
+          case 'DECREMENT':
+          return {...state,count:state.count-1};
+      
+          default:
+            return state;
+
+}
+
 
 }

@@ -13,6 +13,10 @@ import { HeaderComponent } from './header/header.component';
 import { NgReduxModule, NgRedux } from '@angular-redux/store';
 import { store } from './store/store';
 import { IAppState } from './store/app-state.type';
+// import { store } from './storeTwo/store';
+// import { IAppState } from './storeTwo/app-state.type';
+
+import { ExampleTwoComponent } from './example-two/example-two.component';
 
 
 
@@ -20,7 +24,8 @@ import { IAppState } from './store/app-state.type';
   declarations: [
     AppComponent,
     CardComponent,
-    HeaderComponent
+    HeaderComponent,
+    ExampleTwoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +34,18 @@ import { IAppState } from './store/app-state.type';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  // bootstrap: [ExampleTwoComponent]
 })
+// export class AppModule { 
+//   constructor(ngRedux: NgRedux<IAppState>) {
+//     ngRedux.provideStore(store);
+//   }
+
 export class AppModule { 
   constructor(ngRedux: NgRedux<IAppState>) {
     ngRedux.provideStore(store);
   }
+
 
 
 }

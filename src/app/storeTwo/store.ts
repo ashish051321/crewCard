@@ -10,7 +10,8 @@ import {
 import { createLogger } from 'redux-logger';
 import { IAppState } from './app-state.type';
 
-import { crewCard,cartItems } from './custom.reducers'
+// import { crewCard,cartItems } from './custom.reducers'
+import {myReducer} from  './custom.reducers';
 
 const middleware = [createLogger()];
 
@@ -24,26 +25,18 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
- const rootReducer = combineReducers({
-     crewCard,
-     cartItems
- });
+//  const rootReducer = combineReducers({
+//      crewCard,
+//      cartItems
+//  });
 
 
 const initialState: IAppState = {
-  crewCard: {
-    name: "Condoleeza Rice",
-    cmtype: "AO Crew Member",
-    title: "Gate Agent",
-    years: "11",
-    flightsserved: "7000",
-    
-  },
-  cartItems: ["please add more items"]
+  count:100
 };
 
 
 export const store: Store<any> = createStore(
-  rootReducer,initialState,
+  myReducer,initialState,
   enhancer
 );

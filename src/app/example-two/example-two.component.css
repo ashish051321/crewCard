@@ -1,0 +1,60 @@
+div.settings{
+    margin-left:60px;
+  margin-top:20px;
+
+}
+div.settings > button{
+  border-radius: 5px;
+  padding: 5px;
+}
+
+ml-10{
+  margin-left: 10px;
+}
+div.bigbutton{
+  
+  width: 123px;
+  height: 83px;
+  line-height: 83px;
+  margin-left:60px;
+  margin-top:20px;
+  display: inline-block;
+/*   padding: 40px;
+  padding-right: 60px;
+  padding-left: 60px; */
+  border-radius: 20px;
+  text-align: center;
+
+  font-size: 21px;
+  font-weight: lighter;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.bg-blue{
+  background-color: rgb(41, 145, 255);
+  color: rgb(199, 223, 252);
+}
+
+.bg-dark-pink{
+  background-color: rgb(252, 48, 116);
+  color: white;
+}
+.bg-grey{
+  background-color: rgb(61, 61, 63);
+  color: rgb(199, 223, 252);
+}
+
+.bg-pink{
+  background-color: rgb(240, 148, 148);
+  color: black;
+}
+
+.bg-mustard{
+  background-color: rgb(255, 180, 0);
+  color: rgb(152, 0, 0);
+}
+
+.bg-peach{
+  background-color: rgb(238, 149, 113);
+  color: rgb(199, 223, 252);
+}
